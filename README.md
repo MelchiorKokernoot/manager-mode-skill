@@ -1,6 +1,6 @@
 # manager-mode-skill
 
-An instruction-only Codex skill for turning a Backlog.md ticket into a bounded,
+An instruction-only Codex skill for turning a [Backlog.md](https://github.com/MrLesk/Backlog.md) task into a bounded,
 reviewable workflow: independent research, manager planning, executor
 implementation, and manager approval.
 
@@ -22,6 +22,21 @@ Mention `$managermode` in a Codex task that needs the workflow. It asks for the
 researcher, manager/reviewer, and executor configuration, then enforces the
 research → plan approval → implementation → review sequence. Research is
 read-only, handoffs use fixed schemas, and corrections stop after three cycles.
+
+## Optional Backlog.md setup
+
+This skill can use [Backlog.md](https://github.com/MrLesk/Backlog.md) as its task
+ledger. Install and initialize it in the project where you want to track work:
+
+```bash
+npm install --global backlog.md
+backlog init "My project"
+backlog instructions overview
+```
+
+Backlog.md stores tasks in its configured project-local backlog directory. This
+repository does not include a hand-written `Backlog.md` file and does not
+require Backlog.md to install or run the skill.
 
 ## Scope
 
