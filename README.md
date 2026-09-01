@@ -47,21 +47,37 @@ manager/reviewer, and a Luna extra-high executor.
 
 ## Workflow
 
+Manager Mode turns one ticket into a bounded review loop. First, configure the
+run and choose zero to three independent researchers. The selected researchers
+investigate in parallel and their read-only findings are condensed for the
+manager. The manager decides the plan, then the executor implements and
+verifies it. The same manager reviews the result: requested changes return to
+the executor, while approval finalizes the ticket.
+
 ```mermaid
 flowchart LR
-    A[Ticket] --> B{Researchers?}
-    B -->|0| C[Manager plan approval]
-    B -->|1 to 3 independent| C
-    C --> D[Executor implementation]
-    D --> E[Manager review]
-    E -->|changes requested| D
-    E -->|approved| F[Complete]
+    U[Ticket] --> I[Configure run]
+
+    I --> R1[Researcher 1]
+    I --> R2[Researcher 2]
+    I --> R3[Researcher 3]
+
+    R1 --> C[Condensed findings]
+    R2 --> C
+    R3 --> C
+
+    C --> M[Manager<br/>Plan & decide]
+    M --> E[Executor<br/>Implement & verify]
+    E --> V[Manager<br/>Review]
+
+    V -->|Changes requested| E
+    V -->|Approved| D[Finalize ticket]
 ```
 
-Plain-text summary: ticket -> optional independent research -> manager plan
-approval -> executor implementation -> manager review -> either changes
-requested (executor revises and the manager reviews again) or approved ->
-complete.
+Plain-text summary: Ticket → configure run → 0–3 independent researchers →
+condensed findings → manager plan and decision → executor implementation and
+verification → manager review → changes return to the executor, or approval
+finalizes the ticket.
 
 ## Optional Backlog.md setup
 
