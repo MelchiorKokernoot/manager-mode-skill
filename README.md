@@ -4,9 +4,23 @@ Turn a bounded ticket into a reviewable Codex workflow: optional independent
 research informs a manager's plan, an executor implements within approved scope,
 and the same manager reviews the result before completion.
 
-## Install in Codex
+## Install from the command line
 
-In a Codex prompt, invoke the built-in installer with the skill directory:
+Install Manager Mode globally for Codex:
+
+```bash
+npx --yes skills@latest add MelchiorKokernoot/manager-mode-skill \
+  --skill managermode \
+  --agent codex \
+  --global \
+  --yes
+```
+
+For a project-local installation, remove `--global`. Restart Codex if the skill
+does not appear in `/skills`.
+
+Alternatively, in a Codex prompt, invoke the built-in installer with the skill
+directory:
 
 ```text
 $skill-installer https://github.com/MelchiorKokernoot/manager-mode-skill/tree/main/skills/managermode
