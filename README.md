@@ -50,12 +50,12 @@ The fast configuration code is optional. Its format is
 | Knob | Meaning | Values |
 | --- | --- | --- |
 | Researcher count | Number of independent researchers | `0`, `1`, `2`, or `3` |
-| Researcher level | Model used for research | Luna `11`–`14`, Terra `21`–`24`, or Sol `31`–`35` |
-| Manager/reviewer level | Model used for planning and review | Luna `11`–`14`, Terra `21`–`24`, or Sol `31`–`35` |
-| Executor level | Model used for implementation | Luna `11`–`14`, Terra `21`–`24`, or Sol `31`–`35` |
+| Researcher level | Model used for research | Luna `11`–`14`, Terra `21`–`24`, Sol `31`–`35`, or Astra `41`–`45` |
+| Manager/reviewer level | Model used for planning and review | Luna `11`–`14`, Terra `21`–`24`, Sol `31`–`35`, or Astra `41`–`45` |
+| Executor level | Model used for implementation | Luna `11`–`14`, Terra `21`–`24`, Sol `31`–`35`, or Astra `41`–`45` |
 
-The first digit selects Luna, Terra, or Sol. The second selects light,
-medium, high, extra-high, or ultra; `5` is valid only for Sol. For example,
+The first digit selects Luna, Terra, Sol, or Astra. The second selects light,
+medium, high, extra-high, or ultra; `5` is valid only for Sol or Astra. For example,
 `1/14/23/14` selects one Luna extra-high researcher, a Terra high
 manager/reviewer, and a Luna extra-high executor.
 

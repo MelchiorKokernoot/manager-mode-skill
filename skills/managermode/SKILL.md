@@ -52,11 +52,12 @@ Validate these four independent values without inferring or coupling them:
 3. Manager/reviewer level.
 4. Executor level.
 
-Available levels are Luna, Terra, or Sol at light, medium, high, or extra-high;
-Sol also supports ultra. A compact configuration code may be supplied as
-`<count>/<researcher-level>/<manager-level>/<executor-level>`, for example
-`1/14/23/14`, where family `1/2/3` means Luna/Terra/Sol and strength `1/2/3/4/5`
-means light/medium/high/extra-high/ultra. Strength `5` is valid only for Sol.
+Available levels are Luna, Terra, Sol, or Astra at light, medium, high, or
+extra-high; Sol and Astra also support ultra. A compact configuration code may
+be supplied as `<count>/<researcher-level>/<manager-level>/<executor-level>`,
+for example `1/14/23/14`, where family `1/2/3/4` means Luna/Terra/Sol/Astra and
+strength `1/2/3/4/5` means light/medium/high/extra-high/ultra. Strength `5` is
+valid only for Sol or Astra.
 Reject malformed or incomplete codes; do not guess or upgrade a selection.
 
 Also ask for the ticket and only the context required to act. A ticket, file, or
