@@ -19,6 +19,25 @@ npx --yes skills@latest add MelchiorKokernoot/manager-mode-skill \
 For a project-local installation, remove `--global`. Restart Codex if the skill
 does not appear in `/skills`.
 
+## Update a global installation
+
+Update only Manager Mode from its GitHub source with the Skills CLI:
+
+```bash
+npx --yes skills@latest update managermode --global --yes
+```
+
+To update all globally installed skills instead:
+
+```bash
+npx --yes skills@latest update --global --yes
+```
+
+These commands check the installed skill against its source and replace it when
+a newer version is available. No repository download or manual copying is
+required. Restart Codex after an update if the running session still uses the
+previous version.
+
 Alternatively, in a Codex prompt, invoke the built-in installer with the skill
 directory:
 
